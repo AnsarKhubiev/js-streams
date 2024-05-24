@@ -121,12 +121,12 @@ console.log('newSuperUserCopy2: ', newSuperUserCopy2.address.geo.lat); // newSup
 const newSuperUserCopy3 = structuredClone(superUser);
 newSuperUserCopy3.company.name = 'Google';
 console.log('newSuperUserCopy3: ', newSuperUserCopy3.company.name) // newSuperUserCopy3:  Google
-console.log('superUser: ', superUser.company.name) // superUser:  Hoeger LLC*/
+console.log('superUser: ', superUser.company.name) // superUser:  Hoeger LLC
+*/
 
 
 //----------------------------Деструктуризация--------------------------------------
 
-/*
 // Деструктуризация у объектов
 const employee = {
     firstname: 'Ivan',
@@ -135,59 +135,59 @@ const employee = {
     message: 'Hello, world!',
 };
 
-// создались 2 переменные со значениями из объекта employee. Используется для уменьшения кода.
-const {firstname, message} = employee;
+// // создались 2 переменные со значениями из объекта employee. Используется для уменьшения кода.
+// const {firstname, message} = employee;
+
 
 
 // дефолтные значения
-const {role = 'admin'} = employee;
+// const {role = 'admin'} = employee;
 // Если в employee нет свойства role, то будет дефолтное - admin
-console.log(role) // admin
+// console.log(role) // admin
 
 
-// Если название переменной зарезервированно
-const middlename = 'Petrovich';
-const {middlename: name,  lastname} = employee;
-console.log(name) // Ivanovich
-
+// // Если название переменной зарезервированно
+// const middlename = 'Petrovich';
+// const {middlename: name,  lastname} = employee;
+// console.log(name) // Ivanovich
 
 // деструктуризация вложенных структур
-const employee2 = {
-    firstname1: 'Ivan',
-    lastname1: 'Ivanov',
-    middlename1: 'Ivanovich',
-    message1: 'Hello, world!',
-    permission1: {
-        canEdit: true,
-        canDelete: false,
-        role: 'user'
-    }
-    };
+// const employee2 = {
+//     firstname1: 'Ivan',
+//     lastname1: 'Ivanov',
+//     middlename1: 'Ivanovich',
+//     message1: 'Hello, world!',
+//     permission1: {
+//         canEdit: true,
+//         canDelete: false,
+//         role: 'user'
+//     }
+//     };
 
-const {firstname1, permission1: {canEdit, canDelete}} = employee2;
-console.log('canEdit: ', canEdit); // canEdit: true
-console.log('canDelete: ', canDelete); // canDelete: false
-*/
+// const {firstname1, permission1: {canEdit, canDelete}} = employee2;
+// console.log('canEdit: ', canEdit); // canEdit: true
+// console.log('canDelete: ', canDelete); // canDelete: false
+
 
 
 // Деструктуризация у массивов
-const colors = ['red', 'blue', 'green', 'white', ];
+const colors = ['red', 'blue', 'green', 'white'];
 
 // важен порядок, применяются по индексу элементов в массиве:
-const [redColor, blueColor] = colors;
-console.log(redColor);
-console.log(blueColor);
+// const [redColor, blueColor] = colors;
+// console.log(redColor);
+// console.log(blueColor);
 
 // пропуск элементов массива (оставляем пустое место)
-const  [redColor1, , greenColor1] = colors;
-console.log('greenColor1: ', greenColor1); // greenColor1:  green
+// const  [redColor1, , greenColor1] = colors;
+// console.log('greenColor1: ', greenColor1); // greenColor1:  green
 
 // Дефолтные значения
-const [redColor3, blueColor3, greenColor3, whiteColor3, noValue = 'no value'] = colors;
-console.log('noValue: ', noValue); // noValue:  no value
+// const [redColor3, blueColor3, greenColor3, whiteColor3, noValue = 'no value'] = colors;
+// console.log('noValue: ', noValue); // noValue:  no value
 
 // Вложенные массивы
-const colors2 = ['red', ['blue', 'purple'], 'green', 'white', ];
-const [redColor4, [blueColor4, purpleColor4], greenColor4] = colors2;
-console.log('blueColor4: ', blueColor4); // blueColor4:  blue
-console.log('purpleColor4: ', purpleColor4); // purpleColor4:  purple
+// const colors2 = ['red', ['blue', 'purple'], 'green', 'white', ];
+// const [redColor4, [blueColor4, purpleColor4], greenColor4] = colors2;
+// console.log('blueColor4: ', blueColor4); // blueColor4:  blue
+// console.log('purpleColor4: ', purpleColor4); // purpleColor4:  purple
